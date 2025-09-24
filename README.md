@@ -15,11 +15,11 @@ This repository implements a multimodal contrastive learning framework inspired 
 
 ### Key Features
 
-- **CVAE + OT**: Conditional VAE trained with an Optimal Transport (Wasserstein) objective on the latent space.
+- **CVAE + OT**: Conditional VAE trained with Optimal Transport (Wasserstein).
 - **Disentanglement**: Encourages factorized latent factors aligned with morphology.
 - **STAR compatibility**: Works with STAR parametric human body models.
 - **Smooth interpolations**: OT regularization yields consistent latent traversals.
-- **Reconstruction & generation**: Reconstruct meshes and sample new shapes under conditions (e.g., weight/height/sex).
+- **Reconstruction & generation**: Reconstruct meshes and sample new shapes under conditions (e.g., weight/height/gender).
 
 ## Repository Structure
 
