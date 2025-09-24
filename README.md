@@ -28,11 +28,18 @@ This repository contains the official implementation of the UCAMi 2025 paper **�
 - **Reconstruction & generation:** Reconstruct meshes and sample new shapes under conditions (e.g., weight/height/gender).
 
 ## 🗂️ Repository Structure
-
-```
-├── README.md                          # This file
-├── LICENSE                           # MIT License
-```
+```text
+.
+├── README.md            # Project overview, usage, and references
+├── LICENSE              # MIT License (or project-specific)
+├── main.py              # Entry point / CLI to train, eval, or infer
+└── lib/
+    ├── __init__.py      # Makes 'lib' a Python package
+    ├── train.py         # Training loop and orchestration
+    ├── models.py        # CVAE/CWAE models, encoders/decoders, losses (KL/MMD/Sinkhorn)
+    ├── eval.py          # Metrics & reporting (recon, OT, disentanglement)
+    ├── utils.py         # Config, logging, seeding, mesh I/O helpers
+    └── dataset.py       # STAR dataset loader, splits, transforms
 
 ## 📈 Results (Global Reconstruction Metrics)
 | Model       | Vertex Error ↓ | Chamfer Dist. ↓ | Wasserstein Dist. ↓ |
