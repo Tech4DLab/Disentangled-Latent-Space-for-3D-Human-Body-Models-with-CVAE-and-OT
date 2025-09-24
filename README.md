@@ -21,7 +21,7 @@ This repository contains the official implementation of the UCAMi 2025 paper **â
 
 
 ## ðŸŽ¯ Key Features
-- **CVAE + OT:** Conditional VAE trained with a Wasserstein/OT objective on the latent space.
+- **CVAE + OT:** Conditional VAE trained with OT.
 - **Disentanglement:** Encourages factorized latent factors aligned with anthropometric attributes.
 - **STAR compatibility:** Works with STAR parametric human body models.
 - **Smooth interpolations:** OT regularization yields consistent latent traversals.
