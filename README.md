@@ -30,16 +30,17 @@ This repository contains the official implementation of the UCAMi 2025 paper **�
 ## 🗂️ Repository Structure
 ```
 .
-├── README.md            # Project overview, usage, and references
+├── README.md            # This file
 ├── LICENSE              # MIT License (or project-specific)
-├── main.py              # Entry point / CLI to train, eval, or infer
+├── main.py              # Entry point / CLI for train, eval and inference
 └── lib/
     ├── __init__.py      # Makes 'lib' a Python package
-    ├── train.py         # Training loop and orchestration
-    ├── models.py        # CVAE/CWAE models, encoders/decoders, losses (KL/MMD/Sinkhorn)
+    ├── train.py         # Training loop and checkpointing
+    ├── losses.py        # Loss functions
+    ├── models.py        # Model definitions (Encoder/Decoder)
     ├── eval.py          # Metrics & reporting (reconstruction, OT, disentanglement)
-    ├── utils.py         # Config, logging, seeding, mesh I/O helpers
-    └── dataset.py       # STAR dataset loader, splits, transforms
+    ├── utils.py         # Normalizations, Data loading, edge_index, etc.
+    └── dataset.py       # Dataset loader
 ```
 
 
