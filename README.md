@@ -12,7 +12,7 @@ This repository contains the official implementation of the UCAMi 2025 paper **â
 
 - **Encoder (graph-based):** Processes the 3D mesh and fuses an external conditioning vector (e.g., height, fat, gender) to output posterior Gaussian parameters.  
 - **Partitioned latent space:** Latent vector **z** is split into three disjoint subspaces, nudging each partition to encode a specific attribute and promoting disentanglement.  
-- **Decoder (MLP):** Reconstructs the mesh from **[z || y]** (latent + conditions).  
+- **Decoder (MLP):** Reconstructs the mesh from **[z||y]** (latent + conditions).  
 - **Loss:**  
   - Reconstruction (Chamfer Distance)  
   - Latent regularization (KL or MMD)  
