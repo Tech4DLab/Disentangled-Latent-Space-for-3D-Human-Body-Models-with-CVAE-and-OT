@@ -6,7 +6,7 @@ This repository contains the official implementation of the UCAMi 2025 paper **�
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.9+-red.svg)](https://pytorch.org/)
 
 
-## Overview
+## 👀 Overview
 
 ![Methodology Overview](Images/Overview.png)
 
@@ -20,14 +20,14 @@ This repository contains the official implementation of the UCAMi 2025 paper **�
   - Attribute consistency (MSE/BCE
 
 
-## Key Features
+## 🎯 Key Features
 - **CVAE + OT:** Conditional VAE trained with a Wasserstein/OT objective on the latent space.
 - **Disentanglement:** Encourages factorized latent factors aligned with anthropometric attributes.
 - **STAR compatibility:** Works with STAR parametric human body models.
 - **Smooth interpolations:** OT regularization yields consistent latent traversals.
 - **Reconstruction & generation:** Reconstruct meshes and sample new shapes under conditions (e.g., weight/height/gender).
 
-## Repository Structure
+## 🗂️ Repository Structure
 
 ```
 multimodal-contrastive-learning-for-clinical-data-alignment-via-fat-composition-representations/
@@ -55,7 +55,7 @@ multimodal-contrastive-learning-for-clinical-data-alignment-via-fat-composition-
     └── videos/                    # Demo videos
 ```
 
-## Results (Global Reconstruction Metrics)
+## 📈 Results (Global Reconstruction Metrics)
 | Model       | Vertex Error ↓ | Chamfer Dist. ↓ | Wasserstein Dist. ↓ |
 |-------------|----------------:|----------------:|--------------------:|
 | CVAE        | 43.1            | 1.7             | 1.5                 |
@@ -63,29 +63,16 @@ multimodal-contrastive-learning-for-clinical-data-alignment-via-fat-composition-
 | CWAE        | 32.7            | 1.1             | 0.9                 |
 | **CWAE + OT** | **21.2**        | **0.5**         | **0.3**             |
 
-## Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### Development Guidelines
-- Follow PEP 8 style guidelines
-- Add docstrings for all functions and classes
-- Include unit tests for new functionality
-- Update documentation for any API changes
-
-## Citation
+## 🔗 Citation
 
 If you use this code in your research, please cite:
 
-## License
+## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
+## 🤝 Acknowledgments
 
 This work was funded by the Spanish State Research Agency (AEI) through grants **PID2023-149562OB-I00** and **PID2023-152804OB-I00**, awarded by **MCIN/AEI/10.13039/501100011033**, and financed by the Government of the Valencian Community (Generalitat Valenciana).
 
