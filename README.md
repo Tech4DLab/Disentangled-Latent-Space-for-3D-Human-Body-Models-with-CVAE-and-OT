@@ -96,8 +96,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-This work was funded by the Spanish State Research Agency (AEI) through grants PID2023-149562OB-I00 and PID2023-152804OB-I00, awarded by MCIN/AEI/10.13039/501100011033, and financed by the Government of the Valencian Community.
-Project context: [Tech4Diet]([https://github.com/Tech4DLab]).
+This work was funded by the Spanish State Research Agency (AEI) through grants **PID2023-149562OB-I00** and **PID2023-152804OB-I00**, awarded by **MCIN/AEI/10.13039/501100011033**, and financed by the Government of the Valencian Community (Generalitat Valenciana).
+
+Project context: [Tech4Diet](https://github.com/Tech4DLab).
 
 ## Contact
 
