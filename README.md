@@ -1,4 +1,4 @@
-# Disentangled-Latent-Space-for-3D-Human-Body-Models-with-CVAE-and-OT
+# Disentangled Latent Space for 3D Human Body Models with CVAE and OT
 This repository contains the official implementation of the UCAMi 2025 paper **“Learning Disentangled Latent Space for 3D Human Body Models with Conditional Variational Autoencoders and Optimal Transport.”** We integrate a Conditional VAE with Optimal Transport regularization to impose geometric structure on the latent space learned from STAR-based body meshes. The model yields a smooth, compact, and **disentangled** representation conditioned on anthropometric variables (e.g., weight, height, sex), enabling high-fidelity reconstruction, controlled shape generation, and smooth latent interpolations across multi-session scans collected during nutritional treatments.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
