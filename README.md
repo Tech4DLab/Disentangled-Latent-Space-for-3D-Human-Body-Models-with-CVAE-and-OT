@@ -15,11 +15,11 @@ This repository implements a multimodal contrastive learning framework inspired 
 
 ### Key Features
 
-- **Seven Clinical Modalities**: Fat composition, muscle composition, biochemistry, anthropometry, demographics, metabolic profile, and cardiovascular physiology
-- **CLIP-inspired Architecture**: Contrastive learning framework with dedicated neural network encoders for each modality
-- **Controllable Training**: Alpha parameter to balance anchor-modality alignment vs. inter-modality relationships
-- **Missing Data Imputation**: Similarity-based reconstruction of missing modalities in latent space
-- **Comprehensive Evaluation**: Benchmarked against traditional imputation methods (KNN, MICE)
+- **CVAE + OT**: Conditional VAE trained with an Optimal Transport (Wasserstein) objective on the latent space.
+- **Disentanglement**: Encourages factorized latent factors aligned with morphology.
+- **STAR compatibility**: Works with STAR parametric human body models.
+- **Smooth interpolations**: OT regularization yields consistent latent traversals.
+- **Reconstruction & generation**: Reconstruct meshes and sample new shapes under conditions (e.g., weight/height/sex).
 
 ## Repository Structure
 
