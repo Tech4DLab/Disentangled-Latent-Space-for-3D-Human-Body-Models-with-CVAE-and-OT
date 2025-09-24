@@ -33,26 +33,6 @@ This repository contains the official implementation of the UCAMi 2025 paper **�
 multimodal-contrastive-learning-for-clinical-data-alignment-via-fat-composition-representations/
 ├── README.md                          # This file
 ├── LICENSE                           # MIT License
-├── .gitignore                       # Git ignore rules
-├── index.html                       # Main project website
-├── project_site/                    # Academic project page
-│   ├── index.html                  # Project presentation page
-│   └── static/                     # Web assets (CSS, JS, images, etc.)
-├── src/                            # Source code
-│   ├── code/
-│   │   ├── clip_tab.py            # Main CLIP-TAB implementation
-│   │   └── methods_comparison.py  # Comparison with baseline methods
-│   ├── embeddings/                # Generated embeddings storage
-│   │   └── exp10.1/               # Experiment results
-│   ├── figures/                   # Generated figures and plots
-│   └── models_weights/            # Trained model weights
-│       └── exp10.1/
-└── static/                        # Static assets (duplicate for GitHub Pages)
-    ├── css/                       # Stylesheets
-    ├── images/                    # Research images and visualizations
-    ├── js/                        # JavaScript files
-    ├── pdfs/                      # Papers and documentation
-    └── videos/                    # Demo videos
 ```
 
 ## 📈 Results (Global Reconstruction Metrics)
@@ -63,7 +43,7 @@ multimodal-contrastive-learning-for-clinical-data-alignment-via-fat-composition-
 | CWAE        | 32.7            | 1.1             | 0.9                 |
 | **CWAE + OT** | **21.2**        | **0.5**         | **0.3**             |
 
-## Visualization
+## 🔎 Visualization
 
 | <img src="Images/generated1.PNG" width="320"> | <img src="Images/generated2.PNG" width="130"> | <img src="Images/Latent.png" width="420"> |
 |:---:|:---:|:---:|
