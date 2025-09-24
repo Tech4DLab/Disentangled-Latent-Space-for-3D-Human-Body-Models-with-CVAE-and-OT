@@ -33,6 +33,7 @@ This repository contains the official implementation of the UCAMi 2025 paper **�
 ├── README.md            # This file
 ├── LICENSE              # MIT License (or project-specific)
 ├── main.py              # Entry point / CLI for train, eval and inference
+├── requirements.txt     # Requirements to create the enviroment
 └── lib/
     ├── __init__.py      # Makes 'lib' a Python package
     ├── train.py         # Training loop and checkpointing
