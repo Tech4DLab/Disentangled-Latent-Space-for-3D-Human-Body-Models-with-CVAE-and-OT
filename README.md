@@ -30,7 +30,6 @@ This repository contains the official implementation of the UCAMi 2025 paper **�
 ## 🗂️ Repository Structure
 
 ```
-multimodal-contrastive-learning-for-clinical-data-alignment-via-fat-composition-representations/
 ├── README.md                          # This file
 ├── LICENSE                           # MIT License
 ```
