@@ -75,3 +75,13 @@ This work was funded by the Spanish State Research Agency (AEI) through grants *
 Project context: [Tech4Diet](https://github.com/Tech4DLab).
 
 ## 📬 Contact
+
+| Name | Role | GitHub | Contact |
+|------|------|--------|---------|
+| [Mario Jerez Tallón](https://github.com/Mariojt72) | Author | @Mariojt72 | mario.jerez@ua.es |
+| [Dr. Nahuel Emiliano Garcia d'Urso](https://github.com/nawue) | Co-authors | @nawue | nahuel.garcia@ua.es |
+| [Ismael Beviá Ballesteros](https://github.com/ibevias) | Co-authors | @ibevias | ismael.bevias@ua.es |
+| [Bernabé Sanchez Sos](https://github.com/Bernabe19) | Co-authors | @Bernabe19 | bernabe.sanchez@ua.es |
+| Dr. Andrés Fuster Guilló | Co-authors | – | fuster@ua.es |
+| Dr. Jorge Azorín López | Co-authors | – | jazorin@ua.es |
+| Dr. Marcelo Saval Calvo | Co-authors | – | m.saval@gcloud.ua.es |
