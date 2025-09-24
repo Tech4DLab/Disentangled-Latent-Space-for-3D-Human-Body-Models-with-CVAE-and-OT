@@ -65,7 +65,7 @@ multimodal-contrastive-learning-for-clinical-data-alignment-via-fat-composition-
 
 ## Visualization
 
-| <img src="assets/img1.png" width="220"> | <img src="assets/img2.png" width="220"> | <img src="assets/img3.png" width="220"> |
+| <img src="Images/generated1.PNG" width="220"> | <img src="generated2.PNG" width="220"> | <img src="Latent.PNG" width="220"> |
 |---|---|---|
 | Figura 1 | Figura 2 | Figura 3 |
 
