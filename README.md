@@ -9,7 +9,7 @@ Repository of the paper Learning Disentangled Latent Space for 3D Human Body Mod
 
 ## Overview
 
-![Methodology Overview](Images/UCAMi.pdf)
+![Methodology Overview](Images/Overview.pdf)
 
 This repository implements a multimodal contrastive learning framework inspired by CLIP, specifically designed to align seven heterogeneous clinical modalities related to obesity research. The framework uses fat composition as an anchor modality to create meaningful representations across different types of clinical data.
 
