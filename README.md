@@ -67,7 +67,7 @@ multimodal-contrastive-learning-for-clinical-data-alignment-via-fat-composition-
 
 | <img src="Images/generated1.PNG" width="320"> | <img src="Images/generated2.PNG" width="130"> | <img src="Images/Latent.png" width="420"> |
 |---|---|---|
-| Generated Model — Front View | Generated Model — Side View | Generated Sample & Closest Match in Latent Space |
+|Model — Front View | Model — Side View | Representations in Latent Space |
 
 
 
