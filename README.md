@@ -81,15 +81,6 @@ multimodal-contrastive-learning-for-clinical-data-alignment-via-fat-composition-
 
 If you use this code in your research, please cite:
 
-```bibtex
-@article{SanchezSos2054MultimodalContrastive,
-  title={Multimodal Contrastive Learning for Clinical Data Alignment via Fat Composition Representations},
-  author={Bernabé Sánchez-Sos and Mario Tomé-Fernández and Ismael Beviá-Ballesteros and Mario Jerez-Tallón and Nahuel García-D'Urso and Jorge Azorín-López and Marcelo Saval-Calvo and Andrés Fuster-Guilló and Miriam Sánchez-SanSegundo},
-  journal={UCAmI 2025},
-  year={2025}
-}
-```
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -99,13 +90,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 This work was funded by the Spanish State Research Agency (AEI) through grants **PID2023-149562OB-I00** and **PID2023-152804OB-I00**, awarded by **MCIN/AEI/10.13039/501100011033**, and financed by the Government of the Valencian Community (Generalitat Valenciana).
 
 Project context: [Tech4Diet](https://github.com/Tech4DLab).
-
-## Contact
-
-- **Bernabé Sánchez-Sos** - [ResearchGate Profile](https://www.researchgate.net/profile/Bernabe-Sanchez-Sos)
-- **Mario Tomé Fernández** - [LinkedIn Profile](https://www.linkedin.com/in/mario-tomé-fernández-86a308352/)
-- **Project Repository** - [GitHub](https://github.com/Bernabe19/multimodal-contrastive-learning-for-clinical-data-alignment-via-fat-composition-representations)
-
----
-
-**Disclaimer**: This research code is provided for educational and research purposes only. It should not be used for clinical decision-making without proper validation and medical oversight.
