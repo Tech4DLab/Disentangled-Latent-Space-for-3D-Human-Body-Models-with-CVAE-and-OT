@@ -1,5 +1,5 @@
 # Disentangled-Latent-Space-for-3D-Human-Body-Models-with-CVAE-and-OT
-Repository of the paper Learning Disentangled Latent Space for 3D Human Body Models with Conditional Variational Autoencoders and Optimal Transport from the UCAMi 2025 conference
+This repository contains the official implementation of the UCAMi 2025 paper **“Learning Disentangled Latent Space for 3D Human Body Models with Conditional Variational Autoencoders and Optimal Transport.”** We integrate a Conditional VAE with Optimal Transport regularization to impose geometric structure on the latent space learned from STAR-based body meshes. The model yields a smooth, compact, and **disentangled** representation conditioned on anthropometric variables (e.g., weight, height, sex), enabling high-fidelity reconstruction, controlled shape generation, and smooth latent interpolations across multi-session scans collected during nutritional treatments.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/release/python-380/)
@@ -10,15 +10,22 @@ Repository of the paper Learning Disentangled Latent Space for 3D Human Body Mod
 
 ![Methodology Overview](Images/Overview.png)
 
-This repository implements a multimodal contrastive learning framework inspired by CLIP, specifically designed to align seven heterogeneous clinical modalities related to obesity research. The framework uses fat composition as an anchor modality to create meaningful representations across different types of clinical data.
+- **Encoder (graph-based):** Processes the 3D mesh and fuses an external conditioning vector (e.g., height, fat, gender) to output posterior Gaussian parameters.  
+- **Partitioned latent space:** Latent vector **z** is split into three disjoint subspaces, nudging each partition to encode a specific attribute and promoting disentanglement.  
+- **Decoder (MLP):** Reconstructs the mesh from **[z || y]** (latent + conditions).  
+- **Loss:**  
+  - Reconstruction (Chamfer Distance)  
+  - Latent regularization (KL or MMD)  
+  - **Sinkhorn divergence (OT)** for geometric consistency  
+  - Attribute consistency (MSE/BCE
 
-### Key Features
 
-- **CVAE + OT**: Conditional VAE trained with Optimal Transport (Wasserstein).
-- **Disentanglement**: Encourages factorized latent factors aligned with morphology.
-- **STAR compatibility**: Works with STAR parametric human body models.
-- **Smooth interpolations**: OT regularization yields consistent latent traversals.
-- **Reconstruction & generation**: Reconstruct meshes and sample new shapes under conditions (e.g., weight/height/gender).
+## Key Features
+- **CVAE + OT:** Conditional VAE trained with a Wasserstein/OT objective on the latent space.
+- **Disentanglement:** Encourages factorized latent factors aligned with anthropometric attributes.
+- **STAR compatibility:** Works with STAR parametric human body models.
+- **Smooth interpolations:** OT regularization yields consistent latent traversals.
+- **Reconstruction & generation:** Reconstruct meshes and sample new shapes under conditions (e.g., weight/height/gender).
 
 ## Repository Structure
 
@@ -48,174 +55,13 @@ multimodal-contrastive-learning-for-clinical-data-alignment-via-fat-composition-
     └── videos/                    # Demo videos
 ```
 
-## Requirements
-
-### System Requirements
-- Python 3.8 or higher
-- CUDA-capable GPU (recommended for training)
-- Minimum 8GB RAM
-- 2GB free disk space
-
-### Python Dependencies
-
-```bash
-# Core ML libraries
-torch>=1.9.0
-torchvision>=0.10.0
-numpy>=1.21.0
-pandas>=1.3.0
-scikit-learn>=1.0.0
-
-# Visualization
-matplotlib>=3.4.0
-seaborn>=0.11.0
-plotly>=5.0.0
-
-# Data processing
-standardscaler
-tsne
-
-# Utilities
-dotenv
-rich
-argparse
-```
-
-## Installation
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/Bernabe19/multimodal-contrastive-learning-for-clinical-data-alignment-via-fat-composition-representations.git
-   cd multimodal-contrastive-learning-for-clinical-data-alignment-via-fat-composition-representations
-   ```
-
-2. **Create a virtual environment** (recommended):
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. **Install dependencies**:
-   ```bash
-   pip install torch torchvision numpy pandas scikit-learn matplotlib seaborn plotly python-dotenv rich
-   ```
-
-4. **Set up environment variables**:
-   Create a `.env` file in the root directory:
-   ```env
-   DATA_PATH=path/to/your/clinical/data
-   EMBEDDINGS_PATH=src/embeddings/
-   FIGURES_PATH=src/figures/
-   MODELS_PATH=src/models_weights/
-   ```
-
-## Usage
-
-### Data Preparation
-
-Your clinical data should be organized in a CSV file with the following modalities:
-
-- **Fat Composition**: `["Visceral Fat", "Total Fat", "Fat Right Leg", "Fat Left Leg", "Fat Right Arm", "Fat Left Arm", "Fat Trunk"]`
-- **Biochemical**: `["Cholesterol", "Glucose"]`
-- **Anthropometric**: `["Height", "Weight", "Total Muscle", "Wrist", "Waist", "Hip", "WHR"]`
-- **Muscle Composition**: `["Total Muscle", "Muscle Right Leg", "Muscle Left Leg", "Muscle Right Arm", "Muscle Left Arm", "Muscle Trunk"]`
-- **Demographics**: `["Age", "Gender"]`
-- **Metabolic Profile**: `["BMR", "TEE", "Activity"]`
-- **Cardiovascular Physiology**: `["Systolic", "Diastolic"]`
-
-### Training the Model
-
-1. **Basic training** (single alpha value):
-   ```bash
-   cd src/code
-   python clip_tab.py
-   ```
-
-2. **Hyperparameter search** (multiple alpha values):
-   ```bash
-   # Edit clip_tab.py and set: search = True
-   python clip_tab.py
-   ```
-
-### Key Parameters
-
-- `alpha`: Controls balance between anchor-modality loss and inter-modality loss (0.0-1.0)
-- `epochs`: Number of training epochs (default: 2000)
-- `batch_size`: Training batch size (default: 64)
-- `temperature`: Temperature parameter for contrastive loss (default: 0.1)
-- `hidden_dim`: Hidden dimension for MLP encoders (default: 1024)
-- `out_dim`: Output embedding dimension (default: 128)
-
-### Evaluating Imputation Performance
-
-```bash
-cd src/code
-python methods_comparison.py --modality bioq --num_ret 4 --method cosine
-```
-
-Parameters:
-- `--modality`: Modality to impute (`bioq`, `antro`, `muscle`, `demo`, `meta`, `physio`)
-- `--num_ret`: Number of neighbors for retrieval (default: 4)
-- `--method`: Similarity method (`cosine`, `euclidean`)
-
-## Model Architecture
-
-### MLP Encoder
-Each modality is processed by a dedicated MLP encoder:
-```
-Input → Linear(input_dim, 1024) → BatchNorm → ReLU → Dropout(0.3) → Linear(1024, 128)
-```
-
-### Contrastive Loss
-The framework uses a symmetric CLIP-style contrastive loss with two components:
-1. **Anchor Loss**: Fat composition aligned with each other modality
-2. **Full Loss**: All pairwise modality alignments
-
-Final loss: `L = α × L_anchor + (1-α) × L_full`
-
-## Experimental Results
-
-The framework demonstrates competitive or superior performance compared to traditional imputation methods:
-- **KNN Imputation**: Using k-nearest neighbors on individual or all modalities
-- **MICE**: Multiple Imputation by Chained Equations
-- **Our Method**: Similarity-based imputation in learned embedding space
-
-## Restrictions and Limitations
-
-### ⚠️ Important Restrictions
-
-1. **Data Privacy**: 
-   - This code handles sensitive clinical data
-   - Ensure compliance with HIPAA, GDPR, or relevant data protection regulations
-   - Never commit real patient data to version control
-   - Use anonymized/synthetic data for testing
-
-2. **Research Use Only**:
-   - This implementation is for research purposes
-   - Not validated for clinical decision-making
-   - Requires proper medical supervision for any clinical applications
-
-3. **Data Requirements**:
-   - Requires specific clinical modalities as defined above
-   - Data must be properly normalized and preprocessed
-   - Missing data patterns may affect performance
-
-4. **Computational Constraints**:
-   - Training requires significant computational resources
-   - GPU recommended for reasonable training times
-   - Memory requirements scale with dataset size
-
-5. **Hyperparameter Sensitivity**:
-   - Alpha parameter significantly affects alignment quality
-   - Temperature parameter affects contrastive learning dynamics
-   - May require dataset-specific tuning
-
-### Technical Limitations
-
-- **Fixed Architecture**: MLP encoders may not capture complex relationships
-- **Scalability**: Performance on very large datasets not extensively tested
-- **Generalization**: Trained on specific clinical domains and populations
-- **Evaluation Metrics**: Limited to MAE and MRE for imputation quality
+## Results (Global Reconstruction Metrics, ↓ is better)
+| Model       | Vertex Error ↓ | Chamfer Dist. ↓ | Wasserstein Dist. ↓ |
+|-------------|----------------:|----------------:|--------------------:|
+| CVAE        | 43.1            | 1.7             | 1.5                 |
+| **CVAE + OT** | **25.9**        | **0.6**         | **0.5**             |
+| CWAE        | 32.7            | 1.1             | 0.9                 |
+| **CWAE + OT** | **21.2**        | **0.5**         | **0.3**             |
 
 ## Contributing
 
