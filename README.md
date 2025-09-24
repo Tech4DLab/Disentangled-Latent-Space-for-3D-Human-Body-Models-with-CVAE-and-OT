@@ -28,6 +28,7 @@ This repository contains the official implementation of the UCAMi 2025 paper **�
 - **Reconstruction & generation:** Reconstruct meshes and sample new shapes under conditions (e.g., weight/height/gender).
 
 ## 🗂️ Repository Structure
+```
 .
 ├── README.md            # Project overview, usage, and references
 ├── LICENSE              # MIT License (or project-specific)
@@ -39,7 +40,7 @@ This repository contains the official implementation of the UCAMi 2025 paper **�
     ├── eval.py          # Metrics & reporting (reconstruction, OT, disentanglement)
     ├── utils.py         # Config, logging, seeding, mesh I/O helpers
     └── dataset.py       # STAR dataset loader, splits, transforms
-
+```
 
 
 ## 📈 Results (Global Reconstruction Metrics)
