@@ -4,7 +4,6 @@ Repository of the paper Learning Disentangled Latent Space for 3D Human Body Mod
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/release/python-380/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.9+-red.svg)](https://pytorch.org/)
-[![Website](https://img.shields.io/badge/Website-Online-brightgreen.svg)](https://tech4dlab.github.io/multimodal-contrastive-learning-for-clinical-data-alignment-via-fat-composition-representations)
 
 
 ## Overview
