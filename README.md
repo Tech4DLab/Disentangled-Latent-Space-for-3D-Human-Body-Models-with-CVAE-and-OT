@@ -55,7 +55,7 @@ multimodal-contrastive-learning-for-clinical-data-alignment-via-fat-composition-
     └── videos/                    # Demo videos
 ```
 
-## Results (Global Reconstruction Metrics, ↓ is better)
+## Results (Global Reconstruction Metrics)
 | Model       | Vertex Error ↓ | Chamfer Dist. ↓ | Wasserstein Dist. ↓ |
 |-------------|----------------:|----------------:|--------------------:|
 | CVAE        | 43.1            | 1.7             | 1.5                 |
@@ -96,10 +96,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-- University of Alicante - Department of Computer Technology
-- University of Alicante - Department of Health Psychology
-- UCAmI 2025 Conference
-- CLIP paper authors for the original contrastive learning framework
+This work was funded by the Spanish State Research Agency (AEI) through grants PID2023-149562OB-I00 and PID2023-152804OB-I00, awarded by MCIN/AEI/10.13039/501100011033, and financed by the Government of the Valencian Community.
+Project context: [Tech4Diet]([https://github.com/Tech4DLab]).
 
 ## Contact
 
