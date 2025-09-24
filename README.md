@@ -40,7 +40,7 @@ This repository contains the official implementation of the UCAMi 2025 paper **�
     ├── eval.py          # Metrics & reporting (recon, OT, disentanglement)
     ├── utils.py         # Config, logging, seeding, mesh I/O helpers
     └── dataset.py       # STAR dataset loader, splits, transforms
-
+```text
 ## 📈 Results (Global Reconstruction Metrics)
 | Model       | Vertex Error ↓ | Chamfer Dist. ↓ | Wasserstein Dist. ↓ |
 |-------------|----------------:|----------------:|--------------------:|
