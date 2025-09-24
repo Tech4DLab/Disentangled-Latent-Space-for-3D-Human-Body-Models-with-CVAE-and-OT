@@ -63,6 +63,12 @@ multimodal-contrastive-learning-for-clinical-data-alignment-via-fat-composition-
 | CWAE        | 32.7            | 1.1             | 0.9                 |
 | **CWAE + OT** | **21.2**        | **0.5**         | **0.3**             |
 
+## Visualization
+
+| <img src="assets/img1.png" width="220"> | <img src="assets/img2.png" width="220"> | <img src="assets/img3.png" width="220"> |
+|---|---|---|
+| Figura 1 | Figura 2 | Figura 3 |
+
 
 ## 🔗 Citation
 
